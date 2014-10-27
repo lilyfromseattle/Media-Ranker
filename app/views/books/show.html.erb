@@ -1,0 +1,10 @@
+<%= @book.name %>
+<%= @book.author %>
+<%= @book.rank %>
+
+<td><%= link_to "Upvote", "/books/upvote/#{@book.id}" %></td>
+<td><%= link_to "Edit '#{@book.name}'", "/books/#{@book.id}/edit" %></td>
+<td><%= link_to "Delete", "/books/destroy/#{@book.id}" %></td>
+
+<td><%= link_to "View All Books", books_path %></td>
+<td><%= link_to "View All Media", home_path %></td>

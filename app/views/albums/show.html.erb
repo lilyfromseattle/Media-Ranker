@@ -1,0 +1,10 @@
+<%= @album.name %>
+<%= @album.author %>
+<%= @album.rank %>
+
+<td><%= link_to "Upvote", "/albums/upvote/#{@album.id}" %></td>
+<td><%= link_to "Edit '#{@album.name}'", "/albums/#{@album.id}/edit" %></td>
+<td><%= link_to "Delete", "/albums/destroy/#{@album.id}" %></td>
+
+<td><%= link_to "View All albums", albums_path %></td>
+<td><%= link_to "View All Media", home_path %></td>

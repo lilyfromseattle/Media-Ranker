@@ -1,0 +1,19 @@
+<%= form_for @album, url: {action:obj} do |f| %>
+
+  <%= f.label :name, "Album Title:" %>
+  <%= f.text_field :name %>
+  <%= render "shared/error_messages", obj: @album, col: :name %>
+
+  <%= f.label :artist, "Artist:" %>
+  <%= f.text_field :artist %>
+  <%= render "shared/error_messages", obj: @album, col: :artist %>
+
+  <%= f.label :description, "Description:" %>
+  <%= f.text_field :description %>
+  <%= render "shared/error_messages", obj: @album, col: :description %>
+
+  <%= f.hidden_field :rank, :value => 0 %>
+
+<%= f.submit %>
+
+<% end %>

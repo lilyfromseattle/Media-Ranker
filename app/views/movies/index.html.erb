@@ -1,0 +1,9 @@
+<h2>Movies</h2>
+<% @movies.all.each do |movie| %>
+  <tr>
+    <td><%= movie.name %></td>
+    <td><%= movie.director %></td>
+    <td><%= movie.description %></td>
+    <td><%= movie.rank %></td>
+  </tr>
+<% end %>

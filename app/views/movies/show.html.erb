@@ -1,0 +1,10 @@
+<%= @movie.name %>
+<%= @movie.author %>
+<%= @movie.rank %>
+
+<td><%= link_to "Upvote", "/movies/upvote/#{@movie.id}" %></td>
+<td><%= link_to "Edit '#{@movie.name}'", "/movies/#{@movie.id}/edit" %></td>
+<td><%= link_to "Delete", "/movies/destroy/#{@movie.id}" %></td>
+
+<td><%= link_to "View All Movies", movies_path %></td>
+<td><%= link_to "View All Media", home_path %></td>

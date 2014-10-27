@@ -1,0 +1,15 @@
+<h2>Books</h2>
+<% @books.all.each do |book| %>
+  <tr>
+    <td><%= book.name %></td>
+    <td><%= book.author %></td>
+    <td><%= book.description %></td>
+    <td><%= book.rank %></td>
+    <td><%= link_to "Show", "/books/show/#{book.id}" %></td>
+    <td><%= link_to "Destroy", "/books/destroy/#{book.id}" %></td>
+    <td><%= link_to "Edit", "/books/#{book.id}/edit" %></td>
+    <td><%= link_to "Upvote", "/books/upvote/#{book.id}" %></td>
+    <td><%= link_to "Downvote", "/books/downvote/#{book.id}" %></td>
+  </tr>
+<% end %>
+<%= link_to "New Book", new_book_path%>

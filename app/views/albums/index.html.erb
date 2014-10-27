@@ -1,0 +1,10 @@
+<h2>Albums</h2>
+<% @albums_array.each do |album| %>
+  <tr>
+    <td><%= album.name %></td>
+    <td><%= album.artist %></td>
+    <td><%= album.description %></td>
+    <td><%= album.rank %></td>
+  </tr>
+<% end %>
+<%= link_to "New Album", new_album_path%>

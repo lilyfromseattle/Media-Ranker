@@ -1,0 +1,19 @@
+<%= form_for @book, url: {action: obj} do |f| %>
+
+  <%= f.label :name, "Book Title:" %>
+  <%= f.text_field :name %>
+  <%= render "shared/error_messages", obj: @book, col: :name %>
+
+  <%= f.label :author, "Author:" %>
+  <%= f.text_field :author %>
+  <%= render "shared/error_messages", obj: @book, col: :author %>
+
+  <%= f.label :description, "Description:" %>
+  <%= f.text_field :description %>
+  <%= render "shared/error_messages", obj: @book, col: :description %>
+
+  <%= f.hidden_field :rank, :value => 0 %>
+
+  <%= f.submit %>
+
+<% end %>
