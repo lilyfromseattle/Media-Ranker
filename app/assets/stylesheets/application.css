@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  font-family: arial;
+  padding: 0;
+
+}
+
+.my-icons {
+  width: 20px;
+  height: auto;
+}
+
+.my-header {
+  box-shadow: 2px 2px 2px lightgrey;
+  padding: 0;
+  margin: 0;
+  margin-top: -20px;
+  position: fixed;
+  background: white;
+  z-index: 200;
+}
+
+#my-main-title {
+  color: #A4DE04;
+  font-family: "Bree Serif";
+  font-size: 3em;
+  /*padding-bottom: 20px;*/
+  /*margin: 10px;*/
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#my-span {
+  color: black;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));
+}
+
+.my-div {
+  background: #A4DE04;
+  height: 65px;
+  width: auto;
+  float: right;
+  margin: 0;
+}
+
+.my-con {
+  padding:0;
+  margin:0;
+
+}
+.my-browse {
+  font-family: "Bree Serif";
+}
+
+.my-list {
+  list-style: none;
+  font-family: "Bree Serif";
+  /*text-align: center;*/
+  font-size: 1.4em;
+  /*margin-right: 30px;*/
+}
+
+.my-list li {
+  text-align: right;
+}
+
+.my-dropdown {
+  background: pink;
+  /*float: right;*/
+  width: 530px;
+  height: 500px;
+  /*padding-right: 0px;*/
+  padding: 10px;
+  position: fixed;
+}
+
+.my-floater {
+  float: right;
+  background: red;
+}

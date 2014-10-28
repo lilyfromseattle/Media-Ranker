@@ -1,9 +1,31 @@
-<h2>Movies</h2>
-<% @movies.all.each do |movie| %>
-  <tr>
-    <td><%= movie.name %></td>
-    <td><%= movie.director %></td>
-    <td><%= movie.description %></td>
-    <td><%= movie.rank %></td>
-  </tr>
-<% end %>
+<h2 class = "text-center">movies</h2>
+<div class = "container-fluid">
+  <table class = "table table-responsive">
+    <thead>
+      <tr>
+        <td>Rank</td>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @movies_array.each do |movie| %>
+        <tr>
+          <td><%= movie.rank %></td>
+          <td><%= movie.name %></td>
+          <td><%= movie.director %></td>
+          <td><%= movie.description %></td>
+          <td><%= link_to "Show", "/movies/show/#{movie.id}" %></td>
+          <td><%= link_to image_tag("edit.png", :class => "my-icons"), "/movies/#{movie.id}/edit" %></td>
+          <td><%= link_to image_tag("trash.png", :class => "my-icons"), "/movies/destroy/#{movie.id}" %></td>
+          <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/movies/upvote/#{movie.id}" %></td>
+          <td><%= link_to "Downvote", "/movies/downvote/#{movie.id}" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class = "container col-xs-12">
+<%= link_to "New movie", new_movie_path%>
+</div>

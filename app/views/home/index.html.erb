@@ -1,1 +1,56 @@
 <h1>All Media</h1>
+<div class = "container col-lg-6">
+  <table class = "table table-responsive">
+    <thead>
+      <tr>
+        <td>Rank</td>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books_array.each do |book| %>
+        <tr>
+          <td><%= book.rank %></td>
+          <td><%= book.name %></td>
+          <td><%= book.author %></td>
+          <td><%= book.description %></td>
+          <td><%= link_to "Show", "/books/show/#{book.id}" %></td>
+          <td><%= link_to image_tag("edit.png", :class => "my-icons"), "/books/#{book.id}/edit" %></td>
+          <td><%= link_to image_tag("trash.png", :class => "my-icons"), "/books/destroy/#{book.id}" %></td>
+          <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/books/upvote/#{book.id}" %></td>
+          <td><%= link_to "Downvote", "/books/downvote/#{book.id}" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class = "container col-lg-6">
+  <table class = "table table-responsive">
+    <thead>
+      <tr>
+        <td>Rank</td>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @movies_array.each do |movie| %>
+        <tr>
+          <td><%= movie.rank %></td>
+          <td><%= movie.name %></td>
+          <td><%= movie.director %></td>
+          <td><%= movie.description %></td>
+          <td><%= link_to "Show", "/movies/show/#{movie.id}" %></td>
+          <td><%= link_to image_tag("edit.png", :class => "my-icons"), "/movies/#{movie.id}/edit" %></td>
+          <td><%= link_to image_tag("trash.png", :class => "my-icons"), "/movies/destroy/#{movie.id}" %></td>
+          <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/movies/upvote/#{movie.id}" %></td>
+          <td><%= link_to "Downvote", "/movies/downvote/#{movie.id}" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

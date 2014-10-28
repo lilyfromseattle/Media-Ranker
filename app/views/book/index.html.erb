@@ -1,0 +1,8 @@
+<% @books.all.each do |book| %>
+  <tr>
+    <td><%= book.name %></td>
+    <td><%= book.author %></td>
+    <td><%= book.description %></td>
+    <td><%= book.rank %></td>
+  </tr>
+<% end %>

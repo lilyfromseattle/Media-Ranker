@@ -5,9 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+<div class = "container col-xs-12 my-header">
+  <div class = "container col-xs-3 my-con">
+    <h1 id = "my-main-title"><span id = "my-span">Media</span>Ranker</h1>
+  </div>
+  <div class = "container col-xs-1 my-div"><h2 class = "my-browse">Browse</h2></div>
 
+</div>
+
+<div class = "my-floater">
+<div class = "my-dropdown">
+  <ul class = "my-list">
+    <li>Books</li>
+    <li>Movies</li>
+    <li>Albums</li>
+  </ul>
+</div>
+</div>
 <%= yield %>
 
 </body>

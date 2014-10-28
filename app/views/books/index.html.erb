@@ -1,15 +1,31 @@
-<h2>Books</h2>
-<% @books.all.each do |book| %>
-  <tr>
-    <td><%= book.name %></td>
-    <td><%= book.author %></td>
-    <td><%= book.description %></td>
-    <td><%= book.rank %></td>
-    <td><%= link_to "Show", "/books/show/#{book.id}" %></td>
-    <td><%= link_to "Destroy", "/books/destroy/#{book.id}" %></td>
-    <td><%= link_to "Edit", "/books/#{book.id}/edit" %></td>
-    <td><%= link_to "Upvote", "/books/upvote/#{book.id}" %></td>
-    <td><%= link_to "Downvote", "/books/downvote/#{book.id}" %></td>
-  </tr>
-<% end %>
+<h2 class = "text-center">Books</h2>
+<div class = "container-fluid">
+  <table class = "table table-responsive">
+    <thead>
+      <tr>
+        <td>Rank</td>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books_array.each do |book| %>
+        <tr>
+          <td><%= book.rank %></td>
+          <td><%= book.name %></td>
+          <td><%= book.author %></td>
+          <td><%= book.description %></td>
+          <td><%= link_to "Show", "/books/show/#{book.id}" %></td>
+          <td><%= link_to image_tag("edit.png", :class => "my-icons"), "/books/#{book.id}/edit" %></td>
+          <td><%= link_to image_tag("trash.png", :class => "my-icons"), "/books/destroy/#{book.id}" %></td>
+          <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/books/upvote/#{book.id}" %></td>
+          <td><%= link_to "Downvote", "/books/downvote/#{book.id}" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class = "container col-xs-12">
 <%= link_to "New Book", new_book_path%>
+</div>

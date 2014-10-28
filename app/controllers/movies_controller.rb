@@ -1,6 +1,9 @@
 class MoviesController < ApplicationController
   def index
     @movies = Movie.all
+    @movies_array = @movies.sort { |a,b| a.rank <=> b.rank }
+    @movies_array.reverse!
+
   end
 
   def show

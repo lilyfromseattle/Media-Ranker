@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :movies
   resources :books
   resources :albums
+  get  "/",     to: "home#index"
 
   get  "/movies",     to: "movies#index"
   get  "/movies/show/:id", to: "movies#show"
