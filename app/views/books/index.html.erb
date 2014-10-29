@@ -3,24 +3,23 @@
   <table class = "table table-responsive">
     <thead>
       <tr>
-        <td>Rank</td>
-        <td>Title</td>
-        <td>Author</td>
-        <td>Description</td>
+        <td class = "my-label">Rank</td>
+        <td class = "my-label">Title</td>
+        <td class = "my-label">Author</td>
+        <td class = "my-label">Description</td>
       </tr>
     </thead>
     <tbody>
       <% @books_array.each do |book| %>
         <tr>
-          <td><%= book.rank %></td>
-          <td><%= book.name %></td>
-          <td><%= book.author %></td>
+          <td class = "my-rank"><%= book.rank %></td>
+          <td><%= link_to book.name, "/books/show/#{book.id}", :class => "my-name-link" %></td>
+          <td class = "creator-link"><%= book.author %></td>
           <td><%= book.description %></td>
-          <td><%= link_to "Show", "/books/show/#{book.id}" %></td>
           <td><%= link_to image_tag("edit.png", :class => "my-icons"), "/books/#{book.id}/edit" %></td>
           <td><%= link_to image_tag("trash.png", :class => "my-icons"), "/books/destroy/#{book.id}" %></td>
           <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/books/upvote/#{book.id}" %></td>
-          <td><%= link_to "Downvote", "/books/downvote/#{book.id}" %></td>
+          <td><%= link_to image_tag("thumb.png", :class => "my-icons", :id => "rotate-thumb"), "/books/downvote/#{book.id}" %></td>
         </tr>
       <% end %>
     </tbody>

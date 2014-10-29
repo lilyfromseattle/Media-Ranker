@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     @movies = Movie.all
     @movies_array = @movies.sort { |a,b| a.rank <=> b.rank }
     @movies_array.reverse!
+    @albums = Album.all.order(rank: :desc)
 
   end
 

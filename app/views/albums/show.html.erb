@@ -1,10 +1,12 @@
-<%= @album.name %>
-<%= @album.author %>
-<%= @album.rank %>
+<div class = "container col-lg-12">
+    <%= @album.name %>
+    <%= @album.artist %>
+    <%= @album.rank %>
 
-<td><%= link_to "Upvote", "/albums/upvote/#{@album.id}" %></td>
-<td><%= link_to "Edit '#{@album.name}'", "/albums/#{@album.id}/edit" %></td>
-<td><%= link_to "Delete", "/albums/destroy/#{@album.id}" %></td>
+    <td><%= link_to "Upvote", "/albums/upvote/#{@album.id}" %></td>
+    <td><%= link_to "Edit '#{@album.name}'", "/albums/#{@album.id}/edit" %></td>
+    <td><%= link_to "Delete", "/albums/destroy/#{@album.id}" %></td>
 
-<td><%= link_to "View All Albums", albums_path %></td>
-<td><%= link_to "View All Media", home_path %></td>
+    <td><%= link_to "View All Albums", albums_path %></td>
+    <td><%= link_to "View All Media", albums_path %></td>
+</div>

@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>MediaRanker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div class = "container col-xs-12 my-header">
@@ -17,8 +17,15 @@
   <div class = "container col-xs-1 my-div"><h2 class = "my-browse">Browse</h2></div>
 
 </div>
+<div class = "container my-new-float">
+<div class = "container my-new-div">
+  <p>Books</p>
+  <p>Movies</p>
+  <p>Albums</p>
+</div>
+</div>
 
-<div class = "my-floater">
+<!-- <div class = "my-floater">
 <div class = "my-dropdown">
   <ul class = "my-list">
     <li>Books</li>
@@ -26,8 +33,9 @@
     <li>Albums</li>
   </ul>
 </div>
+</div> -->
+<div class = ".sub-body">
+  <%= yield %>
 </div>
-<%= yield %>
-
 </body>
 </html>

@@ -1,3 +1,4 @@
+<div class = "container-fluid blah">
 <%= @book.name %>
 <%= @book.author %>
 <%= @book.rank %>
@@ -7,4 +8,5 @@
 <td><%= link_to "Delete", "/books/destroy/#{@book.id}" %></td>
 
 <td><%= link_to "View All Books", books_path %></td>
-<td><%= link_to "View All Media", home_path %></td>
+<td><%= link_to "View All Media", books_path %></td>
+</div>

@@ -1,8 +1,6 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.all
-    @albums_array = @albums.sort { |a,b| a.rank <=> b.rank }
-    @albums_array.reverse!
+    @albums = Album.all.order(rank: :desc)
   end
 
   def show
@@ -23,7 +21,7 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.new(params.require(:album).permit(:name, :author, :description, :rank))
+    @album = Album.new(params.require(:album).permit(:name, :artist, :description, :rank))
     if @album.save
       redirect_to albums_path, notice: "album was created successfully."
     else
