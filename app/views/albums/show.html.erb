@@ -1,14 +1,14 @@
 <div class = "container my-pages">
-<div class = "container col-lg-12">
-    <%= @album.name %>
-    <%= @album.artist %>
-    <%= @album.rank %>
+<h2><%= @album.name %></h2>
+<h3 class = "grey"><%= @album.artist %></h3>
+<h3 class = "green">Rank: <%= @album.rank %></h3>
+<p><%= @album.description %></p>
 
-    <td><%= link_to "Upvote", "/albums/upvote/#{@album.id}" %></td>
-    <td><%= link_to "Edit '#{@album.name}'", "/albums/#{@album.id}/edit" %></td>
-    <td><%= link_to "Delete", "/albums/destroy/#{@album.id}" %></td>
+<img><%= link_to image_tag("edit.png", :class => "my-icons"), "/albums/#{@album.id}/edit" %></img>
+<img><%= link_to image_tag("trash.png", :class => "my-icons"), "/albums/destroy/#{@album.id}" %></img>
+<img><%= link_to image_tag("thumb.png", :class => "my-icons"), "/albums/upvote/#{@album.id}" %></img>
+<img><%= link_to image_tag("thumb.png", :class => "my-icons", :id => "rotate-thumb"), "/albums/downvote/#{@album.id}" %></p>
 
-    <td><%= link_to "View All Albums", albums_path %></td>
-    <td><%= link_to "View All Media", albums_path %></td>
-</div>
+<td><%= link_to "View All Albums", albums_path, :class => "my-button" %></td>
+<td><%= link_to "View All Media", "/", :class => "my-button" %></td>
 </div>
