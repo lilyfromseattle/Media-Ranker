@@ -1,3 +1,214 @@
 // Place all the styles related to the book controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font-family: 'Raleway';
+  padding: 0;
+
+}
+
+.my-icons {
+  width: 20px;
+  height: auto;
+  margin: 8px;
+  margin-bottom: 15px;
+}
+
+.my-header {
+  box-shadow: 2px 2px 2px lightgrey;
+  padding: 0;
+  margin: 0;
+  /*margin-top: -20px;*/
+  position: fixed;
+  background: white;
+  z-index: 500;
+
+}
+
+#my-main-title {
+  color: #A4DE04;
+  font-family: "Bree Serif";
+  font-size: 3em;
+  /*padding-bottom: 20px;*/
+  /*margin: 10px;*/
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+.my-span {
+  color: black;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));
+}
+
+.my-div {
+  background: #A4DE04;
+  height: 65px;
+  width: auto;
+  float: right;
+  margin: 0;
+  z-index: 300;
+}
+
+.my-div:hover {
+  background:lightgrey;
+}
+.my-con {
+  padding:0;
+  margin:0;
+
+}
+.my-browse {
+  font-family: "Bree Serif";
+}
+
+.my-list {
+  list-style: none;
+  font-family: "Bree Serif";
+  /*text-align: center;*/
+  font-size: 1.4em;
+
+}
+
+.my-list li {
+  text-align: right;
+}
+
+.my-dropdown {
+  background: pink;
+  float: right;
+  /*float: right;*/
+  width: 100px;
+  height: 100px;
+  margin-top: 40px;
+  z-index: 300;
+  /*padding-right: 200px;*/
+  margin-right: 20px;
+  padding: 10px;
+  /*position: fixed;*/
+}
+
+.my-floater {
+  /*float: right;*/
+  position: fixed;
+  /*background: red;*/
+  width: 100%;
+
+}
+
+.my-new-div {
+  background: white;
+  position: absolute;
+  /*margin-top: 46px;*/
+  margin-top: 68px;
+  padding: 10px;
+  /*margin-right: -10px;*/
+  padding-right: 20px;
+  width: 130px;
+  box-shadow: 1px 1px 4px lightgrey;
+  display:none;
+  z-index: 20;
+}
+.my-new-div p {
+  text-align: right;
+  font-size: 1.4em;
+  font-family: "Bree Serif";
+}
+
+.my-new-div p:hover {
+  color: grey;
+}
+
+.my-new-float {
+  float: right;
+  width: 130px;
+  padding: 0;
+  margin: 0;
+}
+
+#rotate-thumb {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.my-label {
+  font-family: "Bree Serif";
+  font-size: 1.2em;
+  color: grey;
+}
+
+.my-name-link {
+  color: black;
+  font-family: "Bree Serif";
+  font-size: 1.2em;
+  /*font-weight: bold;*/
+}
+
+.my-rank {
+  color: #A4DE04;
+  font-family: "Bree Serif";
+  font-size: 2.3em;
+  text-shadow: 1px 1px 2px dimgrey;
+}
+
+.my-name-link:hover {
+  text-decoration: none;
+  color: dimgrey;
+}
+
+.creator-link {
+  font-family: "Bree Serif";
+  font-size: 1.2em;
+  color: dimgrey;
+}
+
+.my-thing {
+  padding: 0;
+  margin: 0;
+}
+.index-link {
+  color: black;
+}
+
+.index-link:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.my-pages {
+  padding-top: 80px;
+}
+
+.main-title-2 {
+  color: #A4DE04;
+}
+.main-title-2:hover {
+  text-decoration: none;
+  color: #A4DE04;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.my-button {
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 15px;
+  color: dimgrey;
+  margin-right: 10px;
+}
+
+.my-button:hover {
+  text-decoration: none;
+  color: black;
+  background: #A4DE04;
+}
+
+.green {
+  color: #A4DE04;
+}
+
+.grey {
+  color: grey;
+}
