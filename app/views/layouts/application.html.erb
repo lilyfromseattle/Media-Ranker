@@ -10,18 +10,19 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
 <div class = "container col-xs-12 my-header">
   <div class = "container col-xs-3 my-con">
-    <h1 id = "my-main-title"><span id = "my-span">Media</span>Ranker</h1>
+    <h1 id = "my-main-title"><a href = "/" class = "main-title-2"><span class = "my-span">Media</span>Ranker</a></h1>
   </div>
   <div class = "container col-xs-1 my-div"><h2 class = "my-browse">Browse</h2></div>
 
 </div>
 <div class = "container my-new-float">
 <div class = "container my-new-div">
-  <p>Books</p>
-  <p>Movies</p>
-  <p>Albums</p>
+  <p><%= link_to "Books", "/books", :class => "index-link" %></p>
+  <p><%= link_to "Movies", "/movies", :class => "index-link" %></p>
+  <p><%= link_to "Albums", "/albums", :class => "index-link" %></p>
 </div>
 </div>
 

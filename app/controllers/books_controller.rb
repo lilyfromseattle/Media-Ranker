@@ -23,6 +23,7 @@ class BooksController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @book = Book.new(params.require(:book).permit(:name, :author, :description, :rank))
     if @book.save
       redirect_to books_path, notice: "book was created successfully."

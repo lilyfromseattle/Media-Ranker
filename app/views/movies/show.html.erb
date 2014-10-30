@@ -1,10 +1,14 @@
-<%= @movie.name %>
-<%= @movie.author %>
-<%= @movie.rank %>
+<div class = "container my-pages">
+<h2><%= @movie.name %></h2>
+<h3 class = "grey"><%= @movie.director %></h3>
+<h3 class = "green">Rank: <%= @movie.rank %></h3>
+<p><%= @movie.description %></p>
 
-<td><%= link_to "Upvote", "/movies/upvote/#{@movie.id}" %></td>
-<td><%= link_to "Edit '#{@movie.name}'", "/movies/#{@movie.id}/edit" %></td>
-<td><%= link_to "Delete", "/movies/destroy/#{@movie.id}" %></td>
+<img><%= link_to image_tag("edit.png", :class => "my-icons"), "/movies/#{@movie.id}/edit" %></img>
+<img><%= link_to image_tag("trash.png", :class => "my-icons"), "/movies/destroy/#{@movie.id}" %></img>
+<img><%= link_to image_tag("thumb.png", :class => "my-icons"), "/movies/upvote/#{@movie.id}" %></img>
+<img><%= link_to image_tag("thumb.png", :class => "my-icons", :id => "rotate-thumb"), "/movies/downvote/#{@movie.id}" %></p>
 
-<td><%= link_to "View All Movies", movies_path %></td>
-<td><%= link_to "View All Media", home_path %></td>
+<td><%= link_to "View All Movies", movies_path, :class => "my-button" %></td>
+<td><%= link_to "View All Media", "/", :class => "my-button" %></td>
+</div>

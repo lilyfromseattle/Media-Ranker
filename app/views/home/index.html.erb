@@ -1,6 +1,6 @@
-<h1>All Media</h1>
+<div class = "container my-pages">
 <div class = "container col-md-4">
-<h2 class = "text-center">Books</h2>
+<h2 class = "text-center"><%= link_to "Books", "/books", :class => "index-link" %></h2>
   <div class = "container-fluid">
     <table class = "table table-responsive">
       <tbody>
@@ -9,9 +9,7 @@
             <td class = "my-rank"><%= book.rank %></td>
             <td><%= link_to book.name, "/books/show/#{book.id}", :class => "my-name-link" %></td>
             <td class = "creator-link"><%= book.author %></td>
-            <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/books/upvote/#{book.id}" %></td>
-            <td><%= link_to image_tag("thumb.png", :class => "my-icons", :id => "rotate-thumb"), "/books/downvote/#{book.id}" %></td>
-          </tr>
+            </tr>
         <% end %>
       </tbody>
     </table>
@@ -19,7 +17,7 @@
 </div>
 
 <div class = "container col-md-4">
-<h2 class = "text-center">Movies</h2>
+<h2 class = "text-center"><%= link_to "Movies", "/movies", :class => "index-link" %></h2>
   <div class = "container-fluid">
     <table class = "table table-responsive">
       <tbody>
@@ -28,8 +26,6 @@
             <td class = "my-rank"><%= movie.rank %></td>
             <td><%= link_to movie.name, "/movies/show/#{movie.id}", :class => "my-name-link" %></td>
             <td class = "creator-link"><%= movie.director %></td>
-            <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/movies/upvote/#{movie.id}" %></td>
-            <td><%= link_to image_tag("thumb.png", :class => "my-icons", :id => "rotate-thumb"), "/movies/downvote/#{movie.id}" %></td>
           </tr>
         <% end %>
       </tbody>
@@ -38,7 +34,7 @@
 </div>
 
 <div class = "container col-md-4">
-  <h2 class = "text-center">Albums</h2>
+<h2 class = "text-center"><%= link_to "Albums", "/albums", :class => "index-link" %></h2>
   <div class = "container-fluid">
     <table class = "table table-responsive">
       <tbody>
@@ -47,11 +43,10 @@
             <td class = "my-rank"><%= album.rank %></td>
             <td><%= link_to album.name, "/albums/show/#{album.id}", :class => "my-name-link" %></td>
             <td class = "creator-link"><%= album.artist %></td>
-            <td><%= link_to image_tag("thumb.png", :class => "my-icons"), "/albums/upvote/#{album.id}" %></td>
-            <td><%= link_to image_tag("thumb.png", :class => "my-icons", :id => "rotate-thumb"), "/albums/downvote/#{album.id}" %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
+</div>
 </div>
